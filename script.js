@@ -44,12 +44,12 @@ brushSlider.addEventListener("change", () => {
 // Setting Brush Color
 brushColorBtn.addEventListener("change", () => {
   isEraser = false;
-  currentColor = `#${brushColorBtn.value}`;
+  currentColor = brushColorBtn.value;
 });
 
 // Setting Background Color
 bucketColorBtn.addEventListener("change", () => {
-  bucketColor = `#${bucketColorBtn.value}`;
+  bucketColor = bucketColorBtn.value;
   createCanvas();
   restoreCanvas();
 });
@@ -122,7 +122,6 @@ function storeDrawn(x, y, size, color, erase) {
     color,
     erase,
   };
-  console.log(line);
   drawnArray.push(line);
 }
 
